@@ -1,6 +1,6 @@
 # coding: utf-8
 
-RSpec.feature "Translations", :js do
+RSpec.feature "Translations", :js, :skip do
   stub_authorization!
 
   given(:language) { Spree.t(:'i18n.this_file_language', locale: 'pt-BR') }

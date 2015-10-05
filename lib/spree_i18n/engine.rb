@@ -1,4 +1,4 @@
-require 'globalize'
+require 'trasto'
 require 'friendly_id/globalize'
 
 module SpreeI18n

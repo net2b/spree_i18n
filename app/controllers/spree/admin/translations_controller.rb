@@ -27,7 +27,7 @@ module Spree
       end
 
       def resource
-        @resource ||= if slugged_models.include? klass.class_name
+        @resource ||= if klass.respond_to?(:friendly)
           klass.friendly.find(params[:resource_id])
         else
           klass.find(params[:resource_id])
@@ -39,10 +39,6 @@ module Spree
         send "admin_#{resource_name}_url", @resource
       rescue
         send "edit_admin_#{resource_name}_url", @resource
-      end
-
-      def slugged_models
-        ["SpreeProduct"]
       end
   end
 end

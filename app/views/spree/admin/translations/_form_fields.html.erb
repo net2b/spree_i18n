@@ -17,11 +17,7 @@
             </tr>
             <tr style="display:<%= i == 0 ? 'auto' : 'none' %>;" class="<%= attr %> <%= locale %> odd">
               <td class="flag table-column">
-                <% if locale.to_s.include?('-') %>
-                  <img src="https://www.localeapp.com/assets/flags/regions/<%= locale.to_s.split('-').last %>.png">
-                <% else %>
-                  <img src="https://www.localeapp.com/assets/flags/languages/<%= locale %>.png">
-                <% end %>
+                <!-- FLAG IMAGES, REMOVED -->
               </td>
               <td class="translation table-column">
                 <% if @resource.class.columns_hash[attr.to_s].type == :text %>
